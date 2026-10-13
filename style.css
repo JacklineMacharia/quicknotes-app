@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f0f2f5;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  background: #2a6f97;
+  color: #fff;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+main section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+main h2 {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Form */
+form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+#note-input {
+  flex: 1;
+}
+
+#search-input {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+button {
+  background: #2a6f97;
+  color: #fff;
+  border-color: #2a6f97;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4f6e;
+  border-color: #1d4f6e;
+}
+
+#error-message {
+  color: #c00;
+  font-weight: bold;
+  min-height: 1.5em;
+  margin: 10px 0 0;
+}
+
+/* Notes */
+#notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note {
+  padding: 12px 14px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-left: 6px solid #999;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.note-text {
+  margin: 0 0 8px;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.note-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.note-category {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.note-date {
+  flex: 1;
+}
+
+.delete-btn {
+  background: #fff;
+  color: #c00;
+  border-color: #c00;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+  background: #c00;
+  color: #fff;
+  border-color: #c00;
+}
+
+#clear-all {
+  background: #fff;
+  color: #c00;
+  border-color: #c00;
+  margin-bottom: 8px;
+}
+
+#clear-all:hover {
+  background: #c00;
+  color: #fff;
+  border-color: #c00;
+}
+
+.message {
+  color: #666;
+  font-style: italic;
+}
+
+/* Category styles */
+.category-personal {
+  border-left-color: teal;
+}
+.category-personal .note-category {
+  color: teal;
+}
+
+.category-work {
+  border-left-color: darkred;
+}
+.category-work .note-category {
+  color: darkred;
+}
+
+.category-study {
+  border-left-color: #1e5fd8;
+}
+.category-study .note-category {
+  color: #1e5fd8;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  main section {
+    padding: 14px;
+  }
+}
